@@ -1,0 +1,1512 @@
+		return false;
+	}
+
+	if (hand->stateminor == HANDSTATEMINOR_ATTACK_SPECIAL_RECOVER) {
+		if (hand->stateframes > TICKS(func->recoverytime60)) {
+			return true;
+		}
+
+		return false;
+	}
+
+	return false;
+}
+
+s32 bgunTickIncAttackEmpty(struct handweaponinfo *info, s32 handnum, struct hand *hand, s32 lvupdate)
+{
+	u32 stack;
+	bool playsound = false;
+
+	switch (info->weaponnum) {
+	case WEAPON_FALCON2:
+	case WEAPON_FALCON2_SILENCER:
+	case WEAPON_FALCON2_SCOPE:
+	case WEAPON_MAGSEC4:
+	case WEAPON_MAULER:
+	case WEAPON_PHOENIX:
+	case WEAPON_DY357MAGNUM:
+	case WEAPON_DY357LX:
+	case WEAPON_CMP150:
+	case WEAPON_CYCLONE:
+	case WEAPON_CALLISTO:
+	case WEAPON_RCP120:
+	case WEAPON_LAPTOPGUN:
+	case WEAPON_REAPER:
+	case WEAPON_TRANQUILIZER:
+	case WEAPON_PP9I:
+	case WEAPON_CC13:
+		// These weapons are weapons with visible finger trigger animations
+		if (hand->stateframes > TICKS(25)) {
+			hand->stateframes -= TICKS(25);
+			hand->stateflags = 0;
+
+			bgunResetAnim(hand);
+		}
+
+		if (hand->animmode != HANDANIMMODE_BUSY) {
+			bool restartedanim = false;
+
+			if ((hand->stateflags & HANDSTATEFLAG_00000010) == 0) {
+				struct weaponfunc *func = NULL;
+
+
+------------------------------
+
+	}
+
+	if (hand->stateminor == HANDSTATEMINOR_ATTACK_SPECIAL_RECOVER) {
+		if (hand->stateframes > TICKS(func->recoverytime60)) {
+			return true;
+		}
+
+		return false;
+	}
+
+	return false;
+}
+
+s32 bgunTickIncAttackEmpty(struct handweaponinfo *info, s32 handnum, struct hand *hand, s32 lvupdate)
+{
+	u32 stack;
+	bool playsound = false;
+
+	switch (info->weaponnum) {
+	case WEAPON_FALCON2:
+	case WEAPON_FALCON2_SILENCER:
+	case WEAPON_FALCON2_SCOPE:
+	case WEAPON_MAGSEC4:
+	case WEAPON_MAULER:
+	case WEAPON_PHOENIX:
+	case WEAPON_DY357MAGNUM:
+	case WEAPON_DY357LX:
+	case WEAPON_CMP150:
+	case WEAPON_CYCLONE:
+	case WEAPON_CALLISTO:
+	case WEAPON_RCP120:
+	case WEAPON_LAPTOPGUN:
+	case WEAPON_REAPER:
+	case WEAPON_TRANQUILIZER:
+	case WEAPON_PP9I:
+	case WEAPON_CC13:
+		// These weapons are weapons with visible finger trigger animations
+		if (hand->stateframes > TICKS(25)) {
+			hand->stateframes -= TICKS(25);
+			hand->stateflags = 0;
+
+			bgunResetAnim(hand);
+		}
+
+		if (hand->animmode != HANDANIMMODE_BUSY) {
+			bool restartedanim = false;
+
+			if ((hand->stateflags & HANDSTATEFLAG_00000010) == 0) {
+				struct weaponfunc *func = NULL;
+
+				if (info->definition) {
+
+------------------------------
+
+
+	if (hand->stateminor == HANDSTATEMINOR_ATTACK_SPECIAL_RECOVER) {
+		if (hand->stateframes > TICKS(func->recoverytime60)) {
+			return true;
+		}
+
+		return false;
+	}
+
+	return false;
+}
+
+s32 bgunTickIncAttackEmpty(struct handweaponinfo *info, s32 handnum, struct hand *hand, s32 lvupdate)
+{
+	u32 stack;
+	bool playsound = false;
+
+	switch (info->weaponnum) {
+	case WEAPON_FALCON2:
+	case WEAPON_FALCON2_SILENCER:
+	case WEAPON_FALCON2_SCOPE:
+	case WEAPON_MAGSEC4:
+	case WEAPON_MAULER:
+	case WEAPON_PHOENIX:
+	case WEAPON_DY357MAGNUM:
+	case WEAPON_DY357LX:
+	case WEAPON_CMP150:
+	case WEAPON_CYCLONE:
+	case WEAPON_CALLISTO:
+	case WEAPON_RCP120:
+	case WEAPON_LAPTOPGUN:
+	case WEAPON_REAPER:
+	case WEAPON_TRANQUILIZER:
+	case WEAPON_PP9I:
+	case WEAPON_CC13:
+		// These weapons are weapons with visible finger trigger animations
+		if (hand->stateframes > TICKS(25)) {
+			hand->stateframes -= TICKS(25);
+			hand->stateflags = 0;
+
+			bgunResetAnim(hand);
+		}
+
+		if (hand->animmode != HANDANIMMODE_BUSY) {
+			bool restartedanim = false;
+
+			if ((hand->stateflags & HANDSTATEFLAG_00000010) == 0) {
+				struct weaponfunc *func = NULL;
+
+				if (info->definition) {
+					func = gsetGetWeaponFunction(&hand->gset);
+
+------------------------------
+
+	if (hand->stateminor == HANDSTATEMINOR_ATTACK_SPECIAL_RECOVER) {
+		if (hand->stateframes > TICKS(func->recoverytime60)) {
+			return true;
+		}
+
+		return false;
+	}
+
+	return false;
+}
+
+s32 bgunTickIncAttackEmpty(struct handweaponinfo *info, s32 handnum, struct hand *hand, s32 lvupdate)
+{
+	u32 stack;
+	bool playsound = false;
+
+	switch (info->weaponnum) {
+	case WEAPON_FALCON2:
+	case WEAPON_FALCON2_SILENCER:
+	case WEAPON_FALCON2_SCOPE:
+	case WEAPON_MAGSEC4:
+	case WEAPON_MAULER:
+	case WEAPON_PHOENIX:
+	case WEAPON_DY357MAGNUM:
+	case WEAPON_DY357LX:
+	case WEAPON_CMP150:
+	case WEAPON_CYCLONE:
+	case WEAPON_CALLISTO:
+	case WEAPON_RCP120:
+	case WEAPON_LAPTOPGUN:
+	case WEAPON_REAPER:
+	case WEAPON_TRANQUILIZER:
+	case WEAPON_PP9I:
+	case WEAPON_CC13:
+		// These weapons are weapons with visible finger trigger animations
+		if (hand->stateframes > TICKS(25)) {
+			hand->stateframes -= TICKS(25);
+			hand->stateflags = 0;
+
+			bgunResetAnim(hand);
+		}
+
+		if (hand->animmode != HANDANIMMODE_BUSY) {
+			bool restartedanim = false;
+
+			if ((hand->stateflags & HANDSTATEFLAG_00000010) == 0) {
+				struct weaponfunc *func = NULL;
+
+				if (info->definition) {
+					func = gsetGetWeaponFunction(&hand->gset);
+				}
+
+------------------------------
+
+	WEAPON_RCP45,
+	WEAPON_SUPERDRAGON, // primary function
+	WEAPON_K7AVENGER,
+	WEAPON_AR34,
+	WEAPON_AR53,
+	WEAPON_KF7SPECIAL,
+	WEAPON_CALLISTO,
+	WEAPON_LAPTOPGUN,
+	WEAPON_DRAGON,
+	WEAPON_CMP150,
+	WEAPON_CYCLONE,
+	WEAPON_ZZT,
+	WEAPON_DMC,
+	WEAPON_KL01313,
+	WEAPON_FARSIGHT,
+	WEAPON_SHOTGUN,
+	WEAPON_REAPER,
+	WEAPON_DY357LX,
+	WEAPON_MAULER,
+	WEAPON_DY357MAGNUM,
+	WEAPON_MAGSEC4,
+	WEAPON_PHOENIX,
+	WEAPON_FALCON2_SCOPE,
+	WEAPON_FALCON2,
+	WEAPON_FALCON2_SILENCER,
+	WEAPON_PP9I,
+	WEAPON_CC13,
+	WEAPON_SNIPERRIFLE,
+	WEAPON_CROSSBOW,
+	WEAPON_TRANQUILIZER,
+	WEAPON_LASER,
+	WEAPON_SUPERDRAGON, // secondary function
+	WEAPON_DEVASTATOR,
+	WEAPON_ROCKETLAUNCHER,
+	WEAPON_SLAYER,
+	WEAPON_GRENADE,
+	WEAPON_NBOMB,
+	WEAPON_PROXIMITYMINE,
+	WEAPON_TIMEDMINE,
+	WEAPON_REMOTEMINE,
+	WEAPON_COMBATKNIFE,
+	WEAPON_UNARMED,
+};
+
+u8 g_AutoSwitchWeaponsSecondary[] = {
+	WEAPON_REAPER,
+	WEAPON_DY357LX,
+	WEAPON_DY357MAGNUM,
+	WEAPON_FALCON2_SCOPE,
+	WEAPON_FALCON2,
+	WEAPON_FALCON2_SILENCER,
+
+------------------------------
+
+	WEAPON_K7AVENGER,
+	WEAPON_AR34,
+	WEAPON_AR53,
+	WEAPON_KF7SPECIAL,
+	WEAPON_CALLISTO,
+	WEAPON_LAPTOPGUN,
+	WEAPON_DRAGON,
+	WEAPON_CMP150,
+	WEAPON_CYCLONE,
+	WEAPON_ZZT,
+	WEAPON_DMC,
+	WEAPON_KL01313,
+	WEAPON_FARSIGHT,
+	WEAPON_SHOTGUN,
+	WEAPON_REAPER,
+	WEAPON_DY357LX,
+	WEAPON_MAULER,
+	WEAPON_DY357MAGNUM,
+	WEAPON_MAGSEC4,
+	WEAPON_PHOENIX,
+	WEAPON_FALCON2_SCOPE,
+	WEAPON_FALCON2,
+	WEAPON_FALCON2_SILENCER,
+	WEAPON_PP9I,
+	WEAPON_CC13,
+	WEAPON_SNIPERRIFLE,
+	WEAPON_CROSSBOW,
+	WEAPON_TRANQUILIZER,
+	WEAPON_LASER,
+	WEAPON_SUPERDRAGON, // secondary function
+	WEAPON_DEVASTATOR,
+	WEAPON_ROCKETLAUNCHER,
+	WEAPON_SLAYER,
+	WEAPON_GRENADE,
+	WEAPON_NBOMB,
+	WEAPON_PROXIMITYMINE,
+	WEAPON_TIMEDMINE,
+	WEAPON_REMOTEMINE,
+	WEAPON_COMBATKNIFE,
+	WEAPON_UNARMED,
+};
+
+u8 g_AutoSwitchWeaponsSecondary[] = {
+	WEAPON_REAPER,
+	WEAPON_DY357LX,
+	WEAPON_DY357MAGNUM,
+	WEAPON_FALCON2_SCOPE,
+	WEAPON_FALCON2,
+	WEAPON_FALCON2_SILENCER,
+	WEAPON_UNARMED,
+};
+
+------------------------------
+
+	WEAPON_AR34,
+	WEAPON_AR53,
+	WEAPON_KF7SPECIAL,
+	WEAPON_CALLISTO,
+	WEAPON_LAPTOPGUN,
+	WEAPON_DRAGON,
+	WEAPON_CMP150,
+	WEAPON_CYCLONE,
+	WEAPON_ZZT,
+	WEAPON_DMC,
+	WEAPON_KL01313,
+	WEAPON_FARSIGHT,
+	WEAPON_SHOTGUN,
+	WEAPON_REAPER,
+	WEAPON_DY357LX,
+	WEAPON_MAULER,
+	WEAPON_DY357MAGNUM,
+	WEAPON_MAGSEC4,
+	WEAPON_PHOENIX,
+	WEAPON_FALCON2_SCOPE,
+	WEAPON_FALCON2,
+	WEAPON_FALCON2_SILENCER,
+	WEAPON_PP9I,
+	WEAPON_CC13,
+	WEAPON_SNIPERRIFLE,
+	WEAPON_CROSSBOW,
+	WEAPON_TRANQUILIZER,
+	WEAPON_LASER,
+	WEAPON_SUPERDRAGON, // secondary function
+	WEAPON_DEVASTATOR,
+	WEAPON_ROCKETLAUNCHER,
+	WEAPON_SLAYER,
+	WEAPON_GRENADE,
+	WEAPON_NBOMB,
+	WEAPON_PROXIMITYMINE,
+	WEAPON_TIMEDMINE,
+	WEAPON_REMOTEMINE,
+	WEAPON_COMBATKNIFE,
+	WEAPON_UNARMED,
+};
+
+u8 g_AutoSwitchWeaponsSecondary[] = {
+	WEAPON_REAPER,
+	WEAPON_DY357LX,
+	WEAPON_DY357MAGNUM,
+	WEAPON_FALCON2_SCOPE,
+	WEAPON_FALCON2,
+	WEAPON_FALCON2_SILENCER,
+	WEAPON_UNARMED,
+};
+
+
+------------------------------
+
+	WEAPON_AR53,
+	WEAPON_KF7SPECIAL,
+	WEAPON_CALLISTO,
+	WEAPON_LAPTOPGUN,
+	WEAPON_DRAGON,
+	WEAPON_CMP150,
+	WEAPON_CYCLONE,
+	WEAPON_ZZT,
+	WEAPON_DMC,
+	WEAPON_KL01313,
+	WEAPON_FARSIGHT,
+	WEAPON_SHOTGUN,
+	WEAPON_REAPER,
+	WEAPON_DY357LX,
+	WEAPON_MAULER,
+	WEAPON_DY357MAGNUM,
+	WEAPON_MAGSEC4,
+	WEAPON_PHOENIX,
+	WEAPON_FALCON2_SCOPE,
+	WEAPON_FALCON2,
+	WEAPON_FALCON2_SILENCER,
+	WEAPON_PP9I,
+	WEAPON_CC13,
+	WEAPON_SNIPERRIFLE,
+	WEAPON_CROSSBOW,
+	WEAPON_TRANQUILIZER,
+	WEAPON_LASER,
+	WEAPON_SUPERDRAGON, // secondary function
+	WEAPON_DEVASTATOR,
+	WEAPON_ROCKETLAUNCHER,
+	WEAPON_SLAYER,
+	WEAPON_GRENADE,
+	WEAPON_NBOMB,
+	WEAPON_PROXIMITYMINE,
+	WEAPON_TIMEDMINE,
+	WEAPON_REMOTEMINE,
+	WEAPON_COMBATKNIFE,
+	WEAPON_UNARMED,
+};
+
+u8 g_AutoSwitchWeaponsSecondary[] = {
+	WEAPON_REAPER,
+	WEAPON_DY357LX,
+	WEAPON_DY357MAGNUM,
+	WEAPON_FALCON2_SCOPE,
+	WEAPON_FALCON2,
+	WEAPON_FALCON2_SILENCER,
+	WEAPON_UNARMED,
+};
+
+/**
+
+------------------------------
+
+	WEAPON_CROSSBOW,
+	WEAPON_TRANQUILIZER,
+	WEAPON_LASER,
+	WEAPON_SUPERDRAGON, // secondary function
+	WEAPON_DEVASTATOR,
+	WEAPON_ROCKETLAUNCHER,
+	WEAPON_SLAYER,
+	WEAPON_GRENADE,
+	WEAPON_NBOMB,
+	WEAPON_PROXIMITYMINE,
+	WEAPON_TIMEDMINE,
+	WEAPON_REMOTEMINE,
+	WEAPON_COMBATKNIFE,
+	WEAPON_UNARMED,
+};
+
+u8 g_AutoSwitchWeaponsSecondary[] = {
+	WEAPON_REAPER,
+	WEAPON_DY357LX,
+	WEAPON_DY357MAGNUM,
+	WEAPON_FALCON2_SCOPE,
+	WEAPON_FALCON2,
+	WEAPON_FALCON2_SILENCER,
+	WEAPON_UNARMED,
+};
+
+/**
+ * Automatically choose and equip a new weapon after trying to fire a weapon
+ * which is out of ammo.
+ *
+ * The weapon preference order is stored in two arrays; one for weapons which
+ * should have their primary functions considered and which require ammo, and
+ * another for weapons which should have their secondary functions considered
+ * and don't require ammo for those functions. The second is only used if no
+ * weapons are usable from the primary array.
+ *
+ * For the primary array, the weapon must not be out of ammo. If the player's
+ * current weapon is not in the primary array then the first available primary
+ * will be selected. If the player's current weapon is in the primary array then
+ * the last available weapon earlier than their current weapon will be selected.
+ * If there are no weapons earlier than their current weapon then the first
+ * weapon after their current weapon is selected.
+ *
+ * In the primary array, the SuperDragon is a special case and appears twice.
+ * The first use is for the primary function while the second use is for the
+ * secondary function.
+ *
+ * For the secondary array, the player's current weapon must not be in the
+ * array. The first available weapon is selected. The player's "wantammo" flag
+ * will be set which will force the weapon onto the second function.
+ */
+
+------------------------------
+
+	WEAPON_TRANQUILIZER,
+	WEAPON_LASER,
+	WEAPON_SUPERDRAGON, // secondary function
+	WEAPON_DEVASTATOR,
+	WEAPON_ROCKETLAUNCHER,
+	WEAPON_SLAYER,
+	WEAPON_GRENADE,
+	WEAPON_NBOMB,
+	WEAPON_PROXIMITYMINE,
+	WEAPON_TIMEDMINE,
+	WEAPON_REMOTEMINE,
+	WEAPON_COMBATKNIFE,
+	WEAPON_UNARMED,
+};
+
+u8 g_AutoSwitchWeaponsSecondary[] = {
+	WEAPON_REAPER,
+	WEAPON_DY357LX,
+	WEAPON_DY357MAGNUM,
+	WEAPON_FALCON2_SCOPE,
+	WEAPON_FALCON2,
+	WEAPON_FALCON2_SILENCER,
+	WEAPON_UNARMED,
+};
+
+/**
+ * Automatically choose and equip a new weapon after trying to fire a weapon
+ * which is out of ammo.
+ *
+ * The weapon preference order is stored in two arrays; one for weapons which
+ * should have their primary functions considered and which require ammo, and
+ * another for weapons which should have their secondary functions considered
+ * and don't require ammo for those functions. The second is only used if no
+ * weapons are usable from the primary array.
+ *
+ * For the primary array, the weapon must not be out of ammo. If the player's
+ * current weapon is not in the primary array then the first available primary
+ * will be selected. If the player's current weapon is in the primary array then
+ * the last available weapon earlier than their current weapon will be selected.
+ * If there are no weapons earlier than their current weapon then the first
+ * weapon after their current weapon is selected.
+ *
+ * In the primary array, the SuperDragon is a special case and appears twice.
+ * The first use is for the primary function while the second use is for the
+ * secondary function.
+ *
+ * For the secondary array, the player's current weapon must not be in the
+ * array. The first available weapon is selected. The player's "wantammo" flag
+ * will be set which will force the weapon onto the second function.
+ */
+void bgunAutoSwitchWeapon(void)
+
+------------------------------
+
+	WEAPON_LASER,
+	WEAPON_SUPERDRAGON, // secondary function
+	WEAPON_DEVASTATOR,
+	WEAPON_ROCKETLAUNCHER,
+	WEAPON_SLAYER,
+	WEAPON_GRENADE,
+	WEAPON_NBOMB,
+	WEAPON_PROXIMITYMINE,
+	WEAPON_TIMEDMINE,
+	WEAPON_REMOTEMINE,
+	WEAPON_COMBATKNIFE,
+	WEAPON_UNARMED,
+};
+
+u8 g_AutoSwitchWeaponsSecondary[] = {
+	WEAPON_REAPER,
+	WEAPON_DY357LX,
+	WEAPON_DY357MAGNUM,
+	WEAPON_FALCON2_SCOPE,
+	WEAPON_FALCON2,
+	WEAPON_FALCON2_SILENCER,
+	WEAPON_UNARMED,
+};
+
+/**
+ * Automatically choose and equip a new weapon after trying to fire a weapon
+ * which is out of ammo.
+ *
+ * The weapon preference order is stored in two arrays; one for weapons which
+ * should have their primary functions considered and which require ammo, and
+ * another for weapons which should have their secondary functions considered
+ * and don't require ammo for those functions. The second is only used if no
+ * weapons are usable from the primary array.
+ *
+ * For the primary array, the weapon must not be out of ammo. If the player's
+ * current weapon is not in the primary array then the first available primary
+ * will be selected. If the player's current weapon is in the primary array then
+ * the last available weapon earlier than their current weapon will be selected.
+ * If there are no weapons earlier than their current weapon then the first
+ * weapon after their current weapon is selected.
+ *
+ * In the primary array, the SuperDragon is a special case and appears twice.
+ * The first use is for the primary function while the second use is for the
+ * secondary function.
+ *
+ * For the secondary array, the player's current weapon must not be in the
+ * array. The first available weapon is selected. The player's "wantammo" flag
+ * will be set which will force the weapon onto the second function.
+ */
+void bgunAutoSwitchWeapon(void)
+{
+
+------------------------------
+
+			hand->gunsmokepoint += 0.2f;
+		}
+	}
+
+	hand->gunsmokepoint -= LVUPDATE60FREAL() / 120.0f;
+
+	if (hand->gunsmokepoint < 0.0f) {
+		hand->gunsmokepoint = 0.0f;
+	}
+
+	if (funcdef && (funcdef->type & 0xff) == INVENTORYFUNCTYPE_SHOOT) {
+		f32 mult = 1.0f;
+
+		if (g_Vars.currentplayer->hands[HAND_LEFT].inuse) {
+			mult = 1.5f;
+		}
+
+		hand->forcecreatesmoke = false;
+
+		switch (weaponnum) {
+		case WEAPON_FALCON2:
+		case WEAPON_FALCON2_SCOPE:
+			if (hand->gunsmokepoint * mult > 0.66f) {
+				hand->createsmoke = true;
+			}
+			break;
+		case WEAPON_MAGSEC4:
+		case WEAPON_MAULER:
+			if (hand->gunsmokepoint * mult > 0.75f) {
+				hand->createsmoke = true;
+			}
+			break;
+		case WEAPON_DY357MAGNUM:
+		case WEAPON_DY357LX:
+			if (hand->gunsmokepoint * mult > 0.9f) {
+				hand->createsmoke = true;
+			}
+			break;
+		case WEAPON_CMP150:
+		case WEAPON_DRAGON:
+		case WEAPON_K7AVENGER:
+		case WEAPON_AR34:
+		case WEAPON_SUPERDRAGON:
+			hand->forcecreatesmoke = true;
+
+			if (hand->burstbullets > 14) {
+				hand->createsmoke = true;
+			}
+			break;
+		case WEAPON_CYCLONE:
+		case WEAPON_LAPTOPGUN:
+
+------------------------------
+
+		}
+	}
+
+	hand->gunsmokepoint -= LVUPDATE60FREAL() / 120.0f;
+
+	if (hand->gunsmokepoint < 0.0f) {
+		hand->gunsmokepoint = 0.0f;
+	}
+
+	if (funcdef && (funcdef->type & 0xff) == INVENTORYFUNCTYPE_SHOOT) {
+		f32 mult = 1.0f;
+
+		if (g_Vars.currentplayer->hands[HAND_LEFT].inuse) {
+			mult = 1.5f;
+		}
+
+		hand->forcecreatesmoke = false;
+
+		switch (weaponnum) {
+		case WEAPON_FALCON2:
+		case WEAPON_FALCON2_SCOPE:
+			if (hand->gunsmokepoint * mult > 0.66f) {
+				hand->createsmoke = true;
+			}
+			break;
+		case WEAPON_MAGSEC4:
+		case WEAPON_MAULER:
+			if (hand->gunsmokepoint * mult > 0.75f) {
+				hand->createsmoke = true;
+			}
+			break;
+		case WEAPON_DY357MAGNUM:
+		case WEAPON_DY357LX:
+			if (hand->gunsmokepoint * mult > 0.9f) {
+				hand->createsmoke = true;
+			}
+			break;
+		case WEAPON_CMP150:
+		case WEAPON_DRAGON:
+		case WEAPON_K7AVENGER:
+		case WEAPON_AR34:
+		case WEAPON_SUPERDRAGON:
+			hand->forcecreatesmoke = true;
+
+			if (hand->burstbullets > 14) {
+				hand->createsmoke = true;
+			}
+			break;
+		case WEAPON_CYCLONE:
+		case WEAPON_LAPTOPGUN:
+			if (hand->burstbullets > 20) {
+
+------------------------------
+
+	if (hand->gunsmokepoint < 0.0f) {
+		hand->gunsmokepoint = 0.0f;
+	}
+
+	if (funcdef && (funcdef->type & 0xff) == INVENTORYFUNCTYPE_SHOOT) {
+		f32 mult = 1.0f;
+
+		if (g_Vars.currentplayer->hands[HAND_LEFT].inuse) {
+			mult = 1.5f;
+		}
+
+		hand->forcecreatesmoke = false;
+
+		switch (weaponnum) {
+		case WEAPON_FALCON2:
+		case WEAPON_FALCON2_SCOPE:
+			if (hand->gunsmokepoint * mult > 0.66f) {
+				hand->createsmoke = true;
+			}
+			break;
+		case WEAPON_MAGSEC4:
+		case WEAPON_MAULER:
+			if (hand->gunsmokepoint * mult > 0.75f) {
+				hand->createsmoke = true;
+			}
+			break;
+		case WEAPON_DY357MAGNUM:
+		case WEAPON_DY357LX:
+			if (hand->gunsmokepoint * mult > 0.9f) {
+				hand->createsmoke = true;
+			}
+			break;
+		case WEAPON_CMP150:
+		case WEAPON_DRAGON:
+		case WEAPON_K7AVENGER:
+		case WEAPON_AR34:
+		case WEAPON_SUPERDRAGON:
+			hand->forcecreatesmoke = true;
+
+			if (hand->burstbullets > 14) {
+				hand->createsmoke = true;
+			}
+			break;
+		case WEAPON_CYCLONE:
+		case WEAPON_LAPTOPGUN:
+			if (hand->burstbullets > 20) {
+				hand->createsmoke = true;
+			}
+
+			hand->forcecreatesmoke = true;
+			break;
+
+------------------------------
+
+				hand->createsmoke = true;
+			}
+			break;
+		case WEAPON_REAPER:
+			hand->forcecreatesmoke = true;
+			// fall-through
+		case WEAPON_SHOTGUN:
+			if (hand->firing) {
+				hand->createsmoke = true;
+			}
+			break;
+		}
+	}
+
+	if (hand->createsmoke && (hand->state != HANDSTATE_ATTACK || hand->forcecreatesmoke)) {
+		struct coord smokepos;
+		RoomNum smokerooms[2];
+		s32 smoketype = SMOKETYPE_MUZZLE_AUTOMATIC;
+
+		switch (weaponnum) {
+		case WEAPON_FALCON2:
+		case WEAPON_FALCON2_SCOPE:
+		case WEAPON_MAGSEC4:
+		case WEAPON_MAULER:
+		case WEAPON_DY357MAGNUM:
+		case WEAPON_DY357LX:
+			smoketype = SMOKETYPE_MUZZLE_PISTOL;
+			break;
+		case WEAPON_REAPER:
+			smoketype = SMOKETYPE_MUZZLE_REAPER;
+			break;
+		case WEAPON_SHOTGUN:
+			smoketype = SMOKETYPE_MUZZLE_SHOTGUN;
+			break;
+		}
+
+		smokerooms[0] = g_Vars.currentplayer->cam_room;
+		smokerooms[1] = -1;
+
+		smokepos.x = hand->muzzlepos.x;
+		smokepos.y = hand->muzzlepos.y;
+		smokepos.z = hand->muzzlepos.z;
+
+		hand->gunsmokepoint = 0.0f;
+
+		if (smokeCreateForHand(&smokepos, smokerooms, smoketype, handnum)) {
+			hand->createsmoke = false;
+		}
+	}
+}
+
+
+------------------------------
+
+			}
+			break;
+		case WEAPON_REAPER:
+			hand->forcecreatesmoke = true;
+			// fall-through
+		case WEAPON_SHOTGUN:
+			if (hand->firing) {
+				hand->createsmoke = true;
+			}
+			break;
+		}
+	}
+
+	if (hand->createsmoke && (hand->state != HANDSTATE_ATTACK || hand->forcecreatesmoke)) {
+		struct coord smokepos;
+		RoomNum smokerooms[2];
+		s32 smoketype = SMOKETYPE_MUZZLE_AUTOMATIC;
+
+		switch (weaponnum) {
+		case WEAPON_FALCON2:
+		case WEAPON_FALCON2_SCOPE:
+		case WEAPON_MAGSEC4:
+		case WEAPON_MAULER:
+		case WEAPON_DY357MAGNUM:
+		case WEAPON_DY357LX:
+			smoketype = SMOKETYPE_MUZZLE_PISTOL;
+			break;
+		case WEAPON_REAPER:
+			smoketype = SMOKETYPE_MUZZLE_REAPER;
+			break;
+		case WEAPON_SHOTGUN:
+			smoketype = SMOKETYPE_MUZZLE_SHOTGUN;
+			break;
+		}
+
+		smokerooms[0] = g_Vars.currentplayer->cam_room;
+		smokerooms[1] = -1;
+
+		smokepos.x = hand->muzzlepos.x;
+		smokepos.y = hand->muzzlepos.y;
+		smokepos.z = hand->muzzlepos.z;
+
+		hand->gunsmokepoint = 0.0f;
+
+		if (smokeCreateForHand(&smokepos, smokerooms, smoketype, handnum)) {
+			hand->createsmoke = false;
+		}
+	}
+}
+
+/**
+
+------------------------------
+
+			break;
+		case WEAPON_REAPER:
+			hand->forcecreatesmoke = true;
+			// fall-through
+		case WEAPON_SHOTGUN:
+			if (hand->firing) {
+				hand->createsmoke = true;
+			}
+			break;
+		}
+	}
+
+	if (hand->createsmoke && (hand->state != HANDSTATE_ATTACK || hand->forcecreatesmoke)) {
+		struct coord smokepos;
+		RoomNum smokerooms[2];
+		s32 smoketype = SMOKETYPE_MUZZLE_AUTOMATIC;
+
+		switch (weaponnum) {
+		case WEAPON_FALCON2:
+		case WEAPON_FALCON2_SCOPE:
+		case WEAPON_MAGSEC4:
+		case WEAPON_MAULER:
+		case WEAPON_DY357MAGNUM:
+		case WEAPON_DY357LX:
+			smoketype = SMOKETYPE_MUZZLE_PISTOL;
+			break;
+		case WEAPON_REAPER:
+			smoketype = SMOKETYPE_MUZZLE_REAPER;
+			break;
+		case WEAPON_SHOTGUN:
+			smoketype = SMOKETYPE_MUZZLE_SHOTGUN;
+			break;
+		}
+
+		smokerooms[0] = g_Vars.currentplayer->cam_room;
+		smokerooms[1] = -1;
+
+		smokepos.x = hand->muzzlepos.x;
+		smokepos.y = hand->muzzlepos.y;
+		smokepos.z = hand->muzzlepos.z;
+
+		hand->gunsmokepoint = 0.0f;
+
+		if (smokeCreateForHand(&smokepos, smokerooms, smoketype, handnum)) {
+			hand->createsmoke = false;
+		}
+	}
+}
+
+/**
+ * Update the red beam and dot (used by the Falcon 2 and its variants).
+
+------------------------------
+
+			chrUncloakTemporarily(g_Vars.currentplayer->prop->chr);
+		}
+	}
+
+	if (funcdef) {
+		if ((funcdef->type & 0xff) == INVENTORYFUNCTYPE_MELEE || (funcdef->type & INVENTORYFUNCTYPE_0200)) {
+			createbeam = false;
+		}
+
+		if ((funcdef->type & 0xff) == INVENTORYFUNCTYPE_SPECIAL) {
+			createbeam = false;
+		}
+
+		if ((funcdef->type & 0xff) == INVENTORYFUNCTYPE_THROW) {
+			createbeam = false;
+		}
+	}
+
+	if (createbeam) {
+		switch (weaponnum) {
+		case WEAPON_FALCON2:
+		case WEAPON_FALCON2_SILENCER:
+		case WEAPON_FALCON2_SCOPE:
+		case WEAPON_MAGSEC4:
+		case WEAPON_MAULER:
+		case WEAPON_PHOENIX:
+		case WEAPON_DY357MAGNUM:
+		case WEAPON_DY357LX:
+		case WEAPON_CMP150:
+		case WEAPON_CYCLONE:
+		case WEAPON_CALLISTO:
+		case WEAPON_RCP120:
+		case WEAPON_LAPTOPGUN:
+		case WEAPON_DRAGON:
+		case WEAPON_K7AVENGER:
+		case WEAPON_AR34:
+		case WEAPON_SUPERDRAGON:
+		case WEAPON_REAPER:
+		case WEAPON_SNIPERRIFLE:
+		case WEAPON_FARSIGHT:
+		case WEAPON_TRANQUILIZER:
+		case WEAPON_PP9I:
+		case WEAPON_CC13:
+		case WEAPON_KL01313:
+		case WEAPON_KF7SPECIAL:
+		case WEAPON_ZZT:
+		case WEAPON_DMC:
+		case WEAPON_AR53:
+		case WEAPON_RCP45:
+			beamCreateForHand(handnum);
+			hand->numfires++;
+
+------------------------------
+
+		}
+	}
+
+	if (funcdef) {
+		if ((funcdef->type & 0xff) == INVENTORYFUNCTYPE_MELEE || (funcdef->type & INVENTORYFUNCTYPE_0200)) {
+			createbeam = false;
+		}
+
+		if ((funcdef->type & 0xff) == INVENTORYFUNCTYPE_SPECIAL) {
+			createbeam = false;
+		}
+
+		if ((funcdef->type & 0xff) == INVENTORYFUNCTYPE_THROW) {
+			createbeam = false;
+		}
+	}
+
+	if (createbeam) {
+		switch (weaponnum) {
+		case WEAPON_FALCON2:
+		case WEAPON_FALCON2_SILENCER:
+		case WEAPON_FALCON2_SCOPE:
+		case WEAPON_MAGSEC4:
+		case WEAPON_MAULER:
+		case WEAPON_PHOENIX:
+		case WEAPON_DY357MAGNUM:
+		case WEAPON_DY357LX:
+		case WEAPON_CMP150:
+		case WEAPON_CYCLONE:
+		case WEAPON_CALLISTO:
+		case WEAPON_RCP120:
+		case WEAPON_LAPTOPGUN:
+		case WEAPON_DRAGON:
+		case WEAPON_K7AVENGER:
+		case WEAPON_AR34:
+		case WEAPON_SUPERDRAGON:
+		case WEAPON_REAPER:
+		case WEAPON_SNIPERRIFLE:
+		case WEAPON_FARSIGHT:
+		case WEAPON_TRANQUILIZER:
+		case WEAPON_PP9I:
+		case WEAPON_CC13:
+		case WEAPON_KL01313:
+		case WEAPON_KF7SPECIAL:
+		case WEAPON_ZZT:
+		case WEAPON_DMC:
+		case WEAPON_AR53:
+		case WEAPON_RCP45:
+			beamCreateForHand(handnum);
+			hand->numfires++;
+			return;
+
+------------------------------
+
+	}
+
+	if (funcdef) {
+		if ((funcdef->type & 0xff) == INVENTORYFUNCTYPE_MELEE || (funcdef->type & INVENTORYFUNCTYPE_0200)) {
+			createbeam = false;
+		}
+
+		if ((funcdef->type & 0xff) == INVENTORYFUNCTYPE_SPECIAL) {
+			createbeam = false;
+		}
+
+		if ((funcdef->type & 0xff) == INVENTORYFUNCTYPE_THROW) {
+			createbeam = false;
+		}
+	}
+
+	if (createbeam) {
+		switch (weaponnum) {
+		case WEAPON_FALCON2:
+		case WEAPON_FALCON2_SILENCER:
+		case WEAPON_FALCON2_SCOPE:
+		case WEAPON_MAGSEC4:
+		case WEAPON_MAULER:
+		case WEAPON_PHOENIX:
+		case WEAPON_DY357MAGNUM:
+		case WEAPON_DY357LX:
+		case WEAPON_CMP150:
+		case WEAPON_CYCLONE:
+		case WEAPON_CALLISTO:
+		case WEAPON_RCP120:
+		case WEAPON_LAPTOPGUN:
+		case WEAPON_DRAGON:
+		case WEAPON_K7AVENGER:
+		case WEAPON_AR34:
+		case WEAPON_SUPERDRAGON:
+		case WEAPON_REAPER:
+		case WEAPON_SNIPERRIFLE:
+		case WEAPON_FARSIGHT:
+		case WEAPON_TRANQUILIZER:
+		case WEAPON_PP9I:
+		case WEAPON_CC13:
+		case WEAPON_KL01313:
+		case WEAPON_KF7SPECIAL:
+		case WEAPON_ZZT:
+		case WEAPON_DMC:
+		case WEAPON_AR53:
+		case WEAPON_RCP45:
+			beamCreateForHand(handnum);
+			hand->numfires++;
+			return;
+		case WEAPON_LASER:
+
+------------------------------
+
+
+	if (funcdef) {
+		if ((funcdef->type & 0xff) == INVENTORYFUNCTYPE_MELEE || (funcdef->type & INVENTORYFUNCTYPE_0200)) {
+			createbeam = false;
+		}
+
+		if ((funcdef->type & 0xff) == INVENTORYFUNCTYPE_SPECIAL) {
+			createbeam = false;
+		}
+
+		if ((funcdef->type & 0xff) == INVENTORYFUNCTYPE_THROW) {
+			createbeam = false;
+		}
+	}
+
+	if (createbeam) {
+		switch (weaponnum) {
+		case WEAPON_FALCON2:
+		case WEAPON_FALCON2_SILENCER:
+		case WEAPON_FALCON2_SCOPE:
+		case WEAPON_MAGSEC4:
+		case WEAPON_MAULER:
+		case WEAPON_PHOENIX:
+		case WEAPON_DY357MAGNUM:
+		case WEAPON_DY357LX:
+		case WEAPON_CMP150:
+		case WEAPON_CYCLONE:
+		case WEAPON_CALLISTO:
+		case WEAPON_RCP120:
+		case WEAPON_LAPTOPGUN:
+		case WEAPON_DRAGON:
+		case WEAPON_K7AVENGER:
+		case WEAPON_AR34:
+		case WEAPON_SUPERDRAGON:
+		case WEAPON_REAPER:
+		case WEAPON_SNIPERRIFLE:
+		case WEAPON_FARSIGHT:
+		case WEAPON_TRANQUILIZER:
+		case WEAPON_PP9I:
+		case WEAPON_CC13:
+		case WEAPON_KL01313:
+		case WEAPON_KF7SPECIAL:
+		case WEAPON_ZZT:
+		case WEAPON_DMC:
+		case WEAPON_AR53:
+		case WEAPON_RCP45:
+			beamCreateForHand(handnum);
+			hand->numfires++;
+			return;
+		case WEAPON_LASER:
+			hand->numfires++;
+
+------------------------------
+
+	case WEAPON_DY357LX:
+		if (hand->unk0cc8_04 > 0) {
+			bgunUpdateMagnum(hand, handnum, modeldef, (Mtxf *)mtxallocation);
+		}
+		break;
+	}
+
+	if (hand->firing && g_Vars.lvupdate240 != 0) {
+		bgunCreateFx(hand, handnum, funcdef, weaponnum, modeldef, mtxallocation);
+	}
+
+	if (PLAYERCOUNT() == 1 && IS8MB() && g_Vars.lvupdate240 != 0) {
+		bgunUpdateSmoke(hand, handnum, weaponnum, funcdef);
+	}
+
+	if (hand->ejectstate > EJECTSTATE_INACTIVE) {
+		bgunTickEject(hand, modeldef, isdetonator);
+	}
+
+	if (PLAYERCOUNT() == 1 && IS8MB() && hand->visible
+			&& weaponnum >= WEAPON_FALCON2 && weaponnum <= WEAPON_FALCON2_SCOPE) {
+		bgunUpdateLasersight(hand, modeldef, handnum, mtxallocation);
+	} else {
+		lasersightFree(handnum);
+	}
+
+	hand->animframeinc = 0;
+
+#if VERSION >= VERSION_PAL_BETA
+	hand->animframeincfreal = 0;
+#endif
+}
+
+void bgunTickMaulerCharge(void)
+{
+	struct player *player = g_Vars.currentplayer;
+	s32 i;
+
+	for (i = 0; i < 2; i++) {
+		struct hand *hand = &player->hands[i];
+		u32 charging = false;
+
+		if (hand->inuse) {
+			if (bgunIsReloading(hand)) {
+				// Reloading - reset charge amount
+				hand->matmot1 = 0;
+			} else if (hand->gset.weaponfunc == FUNC_SECONDARY) {
+				// Charging or fully charged
+				s32 oldvalue = hand->matmot1;
+				s32 newvalue;
+
+
+------------------------------
+
+
+	handle = bgunAllocateAudioHandle();
+
+	if (handle) {
+		if (prop->type == PROPTYPE_CHR || prop->type == PROPTYPE_PLAYER) {
+			struct chrdata *chr = prop->chr;
+			s16 soundnum = -1;
+			bool overridden = false;
+			s32 vol;
+			s32 pan;
+
+			if (chrGetShield(chr) > 0) {
+				soundnum = SFX_SHIELD_DAMAGE;
+			} else if (gset->weaponnum == WEAPON_COMBATKNIFE
+					|| gset->weaponnum == WEAPON_COMBATKNIFE // duplicate
+					|| gset->weaponnum == WEAPON_BOLT) {
+				soundnum = SFX_05F6;
+				overridden = true;
+			} else if (gset->weaponnum == WEAPON_UNARMED
+					|| (gset->weaponfunc == FUNC_SECONDARY
+						&& (gset->weaponnum == WEAPON_FALCON2
+							|| gset->weaponnum == WEAPON_FALCON2_SILENCER
+							|| gset->weaponnum == WEAPON_FALCON2_SCOPE
+							|| gset->weaponnum == WEAPON_DY357MAGNUM
+							|| gset->weaponnum == WEAPON_DY357LX))) {
+				s16 sounds[] = { SFX_002F, SFX_0030, SFX_0031 };
+				soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+			} else {
+				s16 sounds[] = { SFX_HIT_CHR, SFX_HIT_CHR };
+				soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+			}
+
+			if (soundnum != -1) {
+				psGetTheoreticalVolPan(&prop->pos, prop->rooms, soundnum, &vol, &pan);
+
+				if (vol) {
+					sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+
+					if (*handle) {
+						sndAdjust(handle, 0, vol, pan, soundnum, 1, 1, -1, 1);
+					}
+				}
+			}
+
+			if (overridden) {
+				return;
+			}
+		} else {
+			s16 soundnum = -1;
+			bool overridden = false;
+			s32 vol;
+
+------------------------------
+
+	handle = bgunAllocateAudioHandle();
+
+	if (handle) {
+		if (prop->type == PROPTYPE_CHR || prop->type == PROPTYPE_PLAYER) {
+			struct chrdata *chr = prop->chr;
+			s16 soundnum = -1;
+			bool overridden = false;
+			s32 vol;
+			s32 pan;
+
+			if (chrGetShield(chr) > 0) {
+				soundnum = SFX_SHIELD_DAMAGE;
+			} else if (gset->weaponnum == WEAPON_COMBATKNIFE
+					|| gset->weaponnum == WEAPON_COMBATKNIFE // duplicate
+					|| gset->weaponnum == WEAPON_BOLT) {
+				soundnum = SFX_05F6;
+				overridden = true;
+			} else if (gset->weaponnum == WEAPON_UNARMED
+					|| (gset->weaponfunc == FUNC_SECONDARY
+						&& (gset->weaponnum == WEAPON_FALCON2
+							|| gset->weaponnum == WEAPON_FALCON2_SILENCER
+							|| gset->weaponnum == WEAPON_FALCON2_SCOPE
+							|| gset->weaponnum == WEAPON_DY357MAGNUM
+							|| gset->weaponnum == WEAPON_DY357LX))) {
+				s16 sounds[] = { SFX_002F, SFX_0030, SFX_0031 };
+				soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+			} else {
+				s16 sounds[] = { SFX_HIT_CHR, SFX_HIT_CHR };
+				soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+			}
+
+			if (soundnum != -1) {
+				psGetTheoreticalVolPan(&prop->pos, prop->rooms, soundnum, &vol, &pan);
+
+				if (vol) {
+					sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+
+					if (*handle) {
+						sndAdjust(handle, 0, vol, pan, soundnum, 1, 1, -1, 1);
+					}
+				}
+			}
+
+			if (overridden) {
+				return;
+			}
+		} else {
+			s16 soundnum = -1;
+			bool overridden = false;
+			s32 vol;
+			s32 pan;
+
+------------------------------
+
+
+	if (handle) {
+		if (prop->type == PROPTYPE_CHR || prop->type == PROPTYPE_PLAYER) {
+			struct chrdata *chr = prop->chr;
+			s16 soundnum = -1;
+			bool overridden = false;
+			s32 vol;
+			s32 pan;
+
+			if (chrGetShield(chr) > 0) {
+				soundnum = SFX_SHIELD_DAMAGE;
+			} else if (gset->weaponnum == WEAPON_COMBATKNIFE
+					|| gset->weaponnum == WEAPON_COMBATKNIFE // duplicate
+					|| gset->weaponnum == WEAPON_BOLT) {
+				soundnum = SFX_05F6;
+				overridden = true;
+			} else if (gset->weaponnum == WEAPON_UNARMED
+					|| (gset->weaponfunc == FUNC_SECONDARY
+						&& (gset->weaponnum == WEAPON_FALCON2
+							|| gset->weaponnum == WEAPON_FALCON2_SILENCER
+							|| gset->weaponnum == WEAPON_FALCON2_SCOPE
+							|| gset->weaponnum == WEAPON_DY357MAGNUM
+							|| gset->weaponnum == WEAPON_DY357LX))) {
+				s16 sounds[] = { SFX_002F, SFX_0030, SFX_0031 };
+				soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+			} else {
+				s16 sounds[] = { SFX_HIT_CHR, SFX_HIT_CHR };
+				soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+			}
+
+			if (soundnum != -1) {
+				psGetTheoreticalVolPan(&prop->pos, prop->rooms, soundnum, &vol, &pan);
+
+				if (vol) {
+					sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+
+					if (*handle) {
+						sndAdjust(handle, 0, vol, pan, soundnum, 1, 1, -1, 1);
+					}
+				}
+			}
+
+			if (overridden) {
+				return;
+			}
+		} else {
+			s16 soundnum = -1;
+			bool overridden = false;
+			s32 vol;
+			s32 pan;
+			u32 stack;
+
+------------------------------
+
+
+	handle = bgunAllocateAudioHandle();
+
+	if (handle) {
+		if (prop->type == PROPTYPE_CHR || prop->type == PROPTYPE_PLAYER) {
+			struct chrdata *chr = prop->chr;
+			s16 soundnum;
+			bool overridden = false;
+
+			if (chrGetShield(chr) > 0) {
+				sndStart(var80095200, SFX_SHIELD_DAMAGE, handle, -1, -1, -1, -1, -1);
+				soundnum = SFX_SHIELD_DAMAGE;
+			} else if (gset->weaponnum == WEAPON_COMBATKNIFE
+					|| gset->weaponnum == WEAPON_COMBATKNIFE // duplicate
+					|| gset->weaponnum == WEAPON_BOLT) {
+				sndStart(var80095200, SFX_05F6, handle, -1, -1, -1, -1, -1);
+				soundnum = SFX_05F6;
+				overridden = true;
+			} else if (gset->weaponnum == WEAPON_UNARMED
+					|| (gset->weaponfunc == FUNC_SECONDARY
+						&& (gset->weaponnum == WEAPON_FALCON2
+							|| gset->weaponnum == WEAPON_FALCON2_SILENCER
+							|| gset->weaponnum == WEAPON_FALCON2_SCOPE
+							|| gset->weaponnum == WEAPON_DY357MAGNUM
+							|| gset->weaponnum == WEAPON_DY357LX))) {
+				s16 sounds[] = { SFX_002F, SFX_0030, SFX_0031 };
+				soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+				sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+			} else {
+				s16 sounds[] = { SFX_HIT_CHR, SFX_HIT_CHR };
+				soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+				sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+			}
+
+			if (*handle) {
+				psApplyVolPan(*handle, &prop->pos, 400, 2500, 3000, prop->rooms, soundnum, AL_VOL_FULL, 0);
+			}
+
+			if (overridden) {
+				return;
+			}
+		} else {
+			s16 soundnum;
+			bool overridden = false;
+			u32 stack;
+
+			if (texturenum == 10000) {
+				sndStart(var80095200, SFX_SHIELD_DAMAGE, handle, -1, -1, -1, -1, -1);
+				soundnum = SFX_SHIELD_DAMAGE;
+			} else if (gset->weaponnum == WEAPON_LASER) {
+				if (gset->weaponfunc == FUNC_PRIMARY || (gset->unk063a % 8) == 0) {
+
+------------------------------
+
+	handle = bgunAllocateAudioHandle();
+
+	if (handle) {
+		if (prop->type == PROPTYPE_CHR || prop->type == PROPTYPE_PLAYER) {
+			struct chrdata *chr = prop->chr;
+			s16 soundnum;
+			bool overridden = false;
+
+			if (chrGetShield(chr) > 0) {
+				sndStart(var80095200, SFX_SHIELD_DAMAGE, handle, -1, -1, -1, -1, -1);
+				soundnum = SFX_SHIELD_DAMAGE;
+			} else if (gset->weaponnum == WEAPON_COMBATKNIFE
+					|| gset->weaponnum == WEAPON_COMBATKNIFE // duplicate
+					|| gset->weaponnum == WEAPON_BOLT) {
+				sndStart(var80095200, SFX_05F6, handle, -1, -1, -1, -1, -1);
+				soundnum = SFX_05F6;
+				overridden = true;
+			} else if (gset->weaponnum == WEAPON_UNARMED
+					|| (gset->weaponfunc == FUNC_SECONDARY
+						&& (gset->weaponnum == WEAPON_FALCON2
+							|| gset->weaponnum == WEAPON_FALCON2_SILENCER
+							|| gset->weaponnum == WEAPON_FALCON2_SCOPE
+							|| gset->weaponnum == WEAPON_DY357MAGNUM
+							|| gset->weaponnum == WEAPON_DY357LX))) {
+				s16 sounds[] = { SFX_002F, SFX_0030, SFX_0031 };
+				soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+				sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+			} else {
+				s16 sounds[] = { SFX_HIT_CHR, SFX_HIT_CHR };
+				soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+				sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+			}
+
+			if (*handle) {
+				psApplyVolPan(*handle, &prop->pos, 400, 2500, 3000, prop->rooms, soundnum, AL_VOL_FULL, 0);
+			}
+
+			if (overridden) {
+				return;
+			}
+		} else {
+			s16 soundnum;
+			bool overridden = false;
+			u32 stack;
+
+			if (texturenum == 10000) {
+				sndStart(var80095200, SFX_SHIELD_DAMAGE, handle, -1, -1, -1, -1, -1);
+				soundnum = SFX_SHIELD_DAMAGE;
+			} else if (gset->weaponnum == WEAPON_LASER) {
+				if (gset->weaponfunc == FUNC_PRIMARY || (gset->unk063a % 8) == 0) {
+					if ((rngRandom() % 2) == 0) {
+
+------------------------------
+
+
+	if (handle) {
+		if (prop->type == PROPTYPE_CHR || prop->type == PROPTYPE_PLAYER) {
+			struct chrdata *chr = prop->chr;
+			s16 soundnum;
+			bool overridden = false;
+
+			if (chrGetShield(chr) > 0) {
+				sndStart(var80095200, SFX_SHIELD_DAMAGE, handle, -1, -1, -1, -1, -1);
+				soundnum = SFX_SHIELD_DAMAGE;
+			} else if (gset->weaponnum == WEAPON_COMBATKNIFE
+					|| gset->weaponnum == WEAPON_COMBATKNIFE // duplicate
+					|| gset->weaponnum == WEAPON_BOLT) {
+				sndStart(var80095200, SFX_05F6, handle, -1, -1, -1, -1, -1);
+				soundnum = SFX_05F6;
+				overridden = true;
+			} else if (gset->weaponnum == WEAPON_UNARMED
+					|| (gset->weaponfunc == FUNC_SECONDARY
+						&& (gset->weaponnum == WEAPON_FALCON2
+							|| gset->weaponnum == WEAPON_FALCON2_SILENCER
+							|| gset->weaponnum == WEAPON_FALCON2_SCOPE
+							|| gset->weaponnum == WEAPON_DY357MAGNUM
+							|| gset->weaponnum == WEAPON_DY357LX))) {
+				s16 sounds[] = { SFX_002F, SFX_0030, SFX_0031 };
+				soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+				sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+			} else {
+				s16 sounds[] = { SFX_HIT_CHR, SFX_HIT_CHR };
+				soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+				sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+			}
+
+			if (*handle) {
+				psApplyVolPan(*handle, &prop->pos, 400, 2500, 3000, prop->rooms, soundnum, AL_VOL_FULL, 0);
+			}
+
+			if (overridden) {
+				return;
+			}
+		} else {
+			s16 soundnum;
+			bool overridden = false;
+			u32 stack;
+
+			if (texturenum == 10000) {
+				sndStart(var80095200, SFX_SHIELD_DAMAGE, handle, -1, -1, -1, -1, -1);
+				soundnum = SFX_SHIELD_DAMAGE;
+			} else if (gset->weaponnum == WEAPON_LASER) {
+				if (gset->weaponfunc == FUNC_PRIMARY || (gset->unk063a % 8) == 0) {
+					if ((rngRandom() % 2) == 0) {
+						soundnum = SFX_CLOAK_ON;
+
+------------------------------
+
