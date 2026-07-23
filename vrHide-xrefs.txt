@@ -1,0 +1,164 @@
+    2290b4: 08 c5 43 b9  	ldr	w8, [x8, #964]
+    2290b8: 68 01 00 34  	cbz	w8, 0x2290e4 <bgun0f0a5550+0xf7c>
+    2290bc: 01 00 00 14  	b	0x2290c0 <bgun0f0a5550+0xf58>
+    2290c0: 48 1f 00 90  	adrp	x8, 0x611000 <bgunTickGameplay2+0x310>
+    2290c4: 08 85 42 f9  	ldr	x8, [x8, #1288]
+    2290c8: 08 4d 41 f9  	ldr	x8, [x8, #664]
+    2290cc: 09 e4 82 52  	mov	w9, #5920
+    2290d0: 00 69 e9 38  	ldrsb	w0, [x8, x9]
+    2290d4: ab 11 0f 94  	bl	0x5ed780 <weaponIsNoDualWield@plt>
+    2290d8: 60 00 00 34  	cbz	w0, 0x2290e4 <bgun0f0a5550+0xf7c>
+    2290dc: 01 00 00 14  	b	0x2290e0 <bgun0f0a5550+0xf78>
+    2290e0: 16 00 00 14  	b	0x229138 <bgun0f0a5550+0xfd0>
+    2290e4: e8 47 40 f9  	ldr	x8, [sp, #136]
+    2290e8: 08 05 40 f9  	ldr	x8, [x8, #8]
+    2290ec: 08 6d 46 b9  	ldr	w8, [x8, #1644]
+    2290f0: 08 05 00 71  	subs	w8, w8, #1
+    2290f4: 00 02 00 54  	b.eq	0x229134 <bgun0f0a5550+0xfcc>
+    2290f8: 01 00 00 14  	b	0x2290fc <bgun0f0a5550+0xf94>
+    2290fc: 40 1f 00 90  	adrp	x0, 0x611000 <bgunTickGameplay2+0x34c>
+    229100: 00 88 45 f9  	ldr	x0, [x0, #2832]
+>   229104: ab 11 0f 94  	bl	0x5ed7b0 <vrHideOnly@plt>
+    229108: e8 47 40 f9  	ldr	x8, [sp, #136]
+    22910c: 08 05 40 f9  	ldr	x8, [x8, #8]
+    229110: 00 d9 41 f9  	ldr	x0, [x8, #944]
+    229114: 9f 11 0f 94  	bl	0x5ed790 <vrHideGunParts@plt>
+    229118: e8 47 40 f9  	ldr	x8, [sp, #136]
+    22911c: 00 05 40 f9  	ldr	x0, [x8, #8]
+    229120: 08 09 40 f9  	ldr	x8, [x8, #16]
+    229124: 01 9d 4b f9  	ldr	x1, [x8, #5944]
+    229128: e2 03 1f 2a  	mov	w2, wzr
+    22912c: ad 11 0f 94  	bl	0x5ed7e0 <vrBuildMtxPartsList@plt>
+    229130: 01 00 00 14  	b	0x229134 <bgun0f0a5550+0xfcc>
+    229134: 01 00 00 14  	b	0x229138 <bgun0f0a5550+0xfd0>
+    229138: 48 1f 00 90  	adrp	x8, 0x611000 <bgunTickGameplay2+0x388>
+    22913c: 08 c5 44 f9  	ldr	x8, [x8, #2440]
+    229140: 08 01 40 b9  	ldr	w8, [x8]
+    229144: 08 06 00 35  	cbnz	w8, 0x229204 <bgun0f0a5550+0x109c>
+    229148: 01 00 00 14  	b	0x22914c <bgun0f0a5550+0xfe4>
+    22914c: 48 1f 00 90  	adrp	x8, 0x611000 <bgunTickGameplay2+0x39c>
+    229150: 08 bd 44 f9  	ldr	x8, [x8, #2424]
+    229154: 08 01 40 b9  	ldr	w8, [x8]
+    229198: 08 4d 41 f9  	ldr	x8, [x8, #664]
+    22919c: 09 e4 82 52  	mov	w9, #5920
+    2291a0: 08 69 a9 38  	ldrsb	x8, [x8, x9]
+    2291a4: 09 39 80 52  	mov	w9, #456
+    2291a8: 09 7d 09 9b  	mul	x9, x8, x9
+    2291ac: e8 1e 00 f0  	adrp	x8, 0x608000 <bgunTickGameplay2+0x3d8>
+    2291b0: 08 21 2c 91  	add	x8, x8, #2824
+    2291b4: 08 01 09 8b  	add	x8, x8, x9
+    2291b8: e9 22 00 f0  	adrp	x9, 0x688000 <bgunTickGameplay2+0x5e4>
+    2291bc: 29 9d 87 b9  	ldrsw	x9, [x9, #1948]
+    2291c0: 0a 13 80 52  	mov	w10, #152
+    2291c4: 29 7d 0a 9b  	mul	x9, x9, x10
+    2291c8: 08 01 09 8b  	add	x8, x8, x9
+    2291cc: e8 4f 00 f9  	str	x8, [sp, #152]
+    2291d0: e8 4f 40 f9  	ldr	x8, [sp, #152]
+    2291d4: 08 11 40 b9  	ldr	w8, [x8, #16]
+    2291d8: 28 01 00 34  	cbz	w8, 0x2291fc <bgun0f0a5550+0x1094>
+    2291dc: 01 00 00 14  	b	0x2291e0 <bgun0f0a5550+0x1078>
+    2291e0: e8 4f 40 f9  	ldr	x8, [sp, #152]
+    2291e4: 00 25 40 f9  	ldr	x0, [x8, #72]
+>   2291e8: 72 11 0f 94  	bl	0x5ed7b0 <vrHideOnly@plt>
+    2291ec: e8 73 40 f9  	ldr	x8, [sp, #224]
+    2291f0: 00 d9 41 f9  	ldr	x0, [x8, #944]
+    2291f4: 67 11 0f 94  	bl	0x5ed790 <vrHideGunParts@plt>
+    2291f8: 01 00 00 14  	b	0x2291fc <bgun0f0a5550+0x1094>
+    2291fc: 01 00 00 14  	b	0x229200 <bgun0f0a5550+0x1098>
+    229200: 01 00 00 14  	b	0x229204 <bgun0f0a5550+0x109c>
+    229204: 48 1f 00 90  	adrp	x8, 0x611000 <bgunTickGameplay2+0x454>
+    229208: 08 85 42 f9  	ldr	x8, [x8, #1288]
+    22920c: 08 4d 41 f9  	ldr	x8, [x8, #664]
+    229210: 09 e4 82 52  	mov	w9, #5920
+    229214: 09 69 e9 38  	ldrsb	w9, [x8, x9]
+    229218: 28 00 80 52  	mov	w8, #1
+    22921c: 29 29 00 71  	subs	w9, w9, #10
+    229220: e8 27 00 b9  	str	w8, [sp, #36]
+    229224: a0 02 00 54  	b.eq	0x229278 <bgun0f0a5550+0x1110>
+    229228: 01 00 00 14  	b	0x22922c <bgun0f0a5550+0x10c4>
+    22922c: 48 1f 00 90  	adrp	x8, 0x611000 <bgunTickGameplay2+0x47c>
+    229230: 08 85 42 f9  	ldr	x8, [x8, #1288]
+    229234: 08 4d 41 f9  	ldr	x8, [x8, #664]
+    229238: 09 e4 82 52  	mov	w9, #5920
+  
+  00000000005ed6e0 <bgrabUpdateSpeedForwards@plt>:
+    5ed6e0: 50 01 00 b0  	adrp	x16, 0x616000 <weaponIsNoDualWield@plt+0x4>
+    5ed6e4: 11 6e 47 f9  	ldr	x17, [x16, #3800]
+    5ed6e8: 10 62 3b 91  	add	x16, x16, #3800
+    5ed6ec: 20 02 1f d6  	br	x17
+  
+  00000000005ed6f0 <bgrabApplyMoveData@plt>:
+    5ed6f0: 50 01 00 b0  	adrp	x16, 0x616000 <vrHideGunParts@plt+0x4>
+    5ed6f4: 11 72 47 f9  	ldr	x17, [x16, #3808]
+    5ed6f8: 10 82 3b 91  	add	x16, x16, #3808
+    5ed6fc: 20 02 1f d6  	br	x17
+  
+  00000000005ed700 <bgrabUpdateSpeedTheta@plt>:
+    5ed700: 50 01 00 b0  	adrp	x16, 0x616000 <vrHideAllExcept@plt+0x4>
+    5ed704: 11 76 47 f9  	ldr	x17, [x16, #3816]
+    5ed708: 10 a2 3b 91  	add	x16, x16, #3816
+    5ed70c: 20 02 1f d6  	br	x17
+  
+  00000000005ed710 <bgrab0f0ce924@plt>:
+>   5ed710: 50 01 00 b0  	adrp	x16, 0x616000 <vrHideOnly@plt+0x4>
+    5ed714: 11 7a 47 f9  	ldr	x17, [x16, #3824]
+    5ed718: 10 c2 3b 91  	add	x16, x16, #3824
+    5ed71c: 20 02 1f d6  	br	x17
+  
+  00000000005ed720 <bmove0f0cba88@plt>:
+    5ed720: 50 01 00 b0  	adrp	x16, 0x616000 <vrBuildHandIndexList@plt+0x4>
+    5ed724: 11 7e 47 f9  	ldr	x17, [x16, #3832]
+    5ed728: 10 e2 3b 91  	add	x16, x16, #3832
+    5ed72c: 20 02 1f d6  	br	x17
+  
+  00000000005ed730 <bmove0f0cc654@plt>:
+    5ed730: 50 01 00 b0  	adrp	x16, 0x616000 <modelFindNodeMtxIndex@plt+0x4>
+    5ed734: 11 82 47 f9  	ldr	x17, [x16, #3840]
+    5ed738: 10 02 3c 91  	add	x16, x16, #3840
+    5ed73c: 20 02 1f d6  	br	x17
+  
+  00000000005ed740 <bmoveUpdateMoveInitSpeed@plt>:
+    5ed740: 50 01 00 b0  	adrp	x16, 0x616000 <vrBuildMtxPartsList@plt+0x4>
+    5ed744: 11 86 47 f9  	ldr	x17, [x16, #3848]
+    5ed748: 10 22 3c 91  	add	x16, x16, #3848
+    5ed77c: 20 02 1f d6  	br	x17
+  
+  00000000005ed780 <weaponIsNoDualWield@plt>:
+    5ed780: 50 01 00 b0  	adrp	x16, 0x616000 <VrSetReloadSnapRot@plt+0x4>
+    5ed784: 11 96 47 f9  	ldr	x17, [x16, #3880]
+    5ed788: 10 a2 3c 91  	add	x16, x16, #3880
+    5ed78c: 20 02 1f d6  	br	x17
+  
+  00000000005ed790 <vrHideGunParts@plt>:
+    5ed790: 50 01 00 b0  	adrp	x16, 0x616000 <vrResolveReloadAnimIds@plt+0x4>
+    5ed794: 11 9a 47 f9  	ldr	x17, [x16, #3888]
+    5ed798: 10 c2 3c 91  	add	x16, x16, #3888
+    5ed79c: 20 02 1f d6  	br	x17
+  
+  00000000005ed7a0 <vrHideAllExcept@plt>:
+    5ed7a0: 50 01 00 b0  	adrp	x16, 0x616000 <bgunGetWeaponInfo@plt+0x4>
+    5ed7a4: 11 9e 47 f9  	ldr	x17, [x16, #3896]
+    5ed7a8: 10 e2 3c 91  	add	x16, x16, #3896
+    5ed7ac: 20 02 1f d6  	br	x17
+  
+> 00000000005ed7b0 <vrHideOnly@plt>:
+    5ed7b0: 50 01 00 b0  	adrp	x16, 0x616000 <memcpy@plt+0x4>
+    5ed7b4: 11 a2 47 f9  	ldr	x17, [x16, #3904]
+    5ed7b8: 10 02 3d 91  	add	x16, x16, #3904
+    5ed7bc: 20 02 1f d6  	br	x17
+  
+  00000000005ed7c0 <vrBuildHandIndexList@plt>:
+    5ed7c0: 50 01 00 b0  	adrp	x16, 0x616000 <bgunStartAnimation@plt+0x4>
+    5ed7c4: 11 a6 47 f9  	ldr	x17, [x16, #3912]
+    5ed7c8: 10 22 3d 91  	add	x16, x16, #3912
+    5ed7cc: 20 02 1f d6  	br	x17
+  
+  00000000005ed7d0 <modelFindNodeMtxIndex@plt>:
+    5ed7d0: 50 01 00 b0  	adrp	x16, 0x616000 <__android_log_print@plt+0x4>
+    5ed7d4: 11 aa 47 f9  	ldr	x17, [x16, #3920]
+    5ed7d8: 10 42 3d 91  	add	x16, x16, #3920
+    5ed7dc: 20 02 1f d6  	br	x17
+  
+  00000000005ed7e0 <vrBuildMtxPartsList@plt>:
+    5ed7e0: 50 01 00 b0  	adrp	x16, 0x616000 <VrDebugAnimFrame@plt+0x4>
+    5ed7e4: 11 ae 47 f9  	ldr	x17, [x16, #3928]
