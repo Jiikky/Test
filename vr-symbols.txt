@@ -1,0 +1,283 @@
+>> Set-Content .\output\bondgun-11405.txt
+PS C:\Users\jimmy\Desktop\perfect_dark_VR-port> Get-Content .\output\bondgun-11260.txt
+        if (g_Vars.lvupdate240 <= 0) {
+                return;
+        }
+
+        if (texturenum >= 0 && texturenum < NUM_TEXTURES
+                        && g_SurfaceTypes[g_Textures[texturenum].soundsurfacetype]->numsounds == 0) {
+                return;
+        }
+
+        if (gset->weaponnum == WEAPON_REMOTEMINE
+                        || gset->weaponnum == WEAPON_PROXIMITYMINE
+                        || gset->weaponnum == WEAPON_TIMEDMINE
+                        || gset->weaponnum == WEAPON_COMMSRIDER
+                        || gset->weaponnum == WEAPON_TRACERBUG
+                        || gset->weaponnum == WEAPON_TARGETAMPLIFIER
+                        || gset->weaponnum == WEAPON_ECMMINE) {
+                psCreate(NULL, prop, SFX_80AA, -1, -1, 0, 0, PSTYPE_NONE, NULL, -1, NULL, -1, -1, -1, -1);
+                return;
+        }
+
+        handle = bgunAllocateAudioHandle();
+
+        if (handle) {
+                if (prop->type == PROPTYPE_CHR || prop->type == PROPTYPE_PLAYER) {
+                        struct chrdata *chr = prop->chr;
+                        s16 soundnum = -1;
+                        bool overridden = false;
+                        s32 vol;
+                        s32 pan;
+
+                        if (chrGetShield(chr) > 0) {
+                                soundnum = SFX_SHIELD_DAMAGE;
+                        } else if (gset->weaponnum == WEAPON_COMBATKNIFE
+                                        || gset->weaponnum == WEAPON_COMBATKNIFE // duplicate
+                                        || gset->weaponnum == WEAPON_BOLT) {
+                                soundnum = SFX_05F6;
+                                overridden = true;
+                        } else if (gset->weaponnum == WEAPON_UNARMED
+                                        || (gset->weaponfunc == FUNC_SECONDARY
+                                                && (gset->weaponnum == WEAPON_FALCON2
+                                                        || gset->weaponnum == WEAPON_FALCON2_SILENCER
+                                                        || gset->weaponnum == WEAPON_FALCON2_SCOPE
+                                                        || gset->weaponnum == WEAPON_DY357MAGNUM
+                                                        || gset->weaponnum == WEAPON_DY357LX))) {
+                                s16 sounds[] = { SFX_002F, SFX_0030, SFX_0031 };
+                                soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+                        } else {
+                                s16 sounds[] = { SFX_HIT_CHR, SFX_HIT_CHR };
+                                soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+                        }
+
+                        if (soundnum != -1) {
+                                psGetTheoreticalVolPan(&prop->pos, prop->rooms, soundnum, &vol, &pan);
+
+                                if (vol) {
+                                        sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+
+                                        if (*handle) {
+                                                sndAdjust(handle, 0, vol, pan, soundnum, 1, 1, -1, 1);
+                                        }
+                                }
+                        }
+
+                        if (overridden) {
+                                return;
+                        }
+                } else {
+                        s16 soundnum = -1;
+                        bool overridden = false;
+                        s32 vol;
+                        s32 pan;
+                        u32 stack;
+
+                        if (texturenum == 10000) {
+                                soundnum = SFX_SHIELD_DAMAGE;
+                        } else if (gset->weaponnum == WEAPON_LASER) {
+                                if (gset->weaponfunc == FUNC_PRIMARY || ((gset->unk063a % 4) == 0 && (rngRandom() % 2))) {
+                                        if ((rngRandom() % 2) == 0) {
+                                                soundnum = SFX_CLOAK_ON;
+                                        } else {
+                                                soundnum = SFX_CLOAK_OFF;
+                                        }
+                                }
+
+                                overridden = true;
+                        } else {
+                                if (gset->weaponnum == WEAPON_COMBATKNIFE || gset->weaponnum == WEAPON_BOLT) {
+                                        soundnum = SFX_HIT_METAL_8079;
+                                        overridden = true;
+                                } else {
+                                        s16 sounds[] = {
+PS C:\Users\jimmy\Desktop\perfect_dark_VR-port>
+PS C:\Users\jimmy\Desktop\perfect_dark_VR-port> Get-Content .\output\bondgun-11405.txt
+        if (g_Vars.lvupdate240 <= 0) {
+                return;
+        }
+
+        if (texturenum >= 0 && texturenum < NUM_TEXTURES
+                        && g_SurfaceTypes[g_Textures[texturenum].soundsurfacetype]->numsounds == 0) {
+                return;
+        }
+
+        if (gset->weaponnum == WEAPON_REMOTEMINE
+                        || gset->weaponnum == WEAPON_PROXIMITYMINE
+                        || gset->weaponnum == WEAPON_TIMEDMINE
+                        || gset->weaponnum == WEAPON_COMMSRIDER
+                        || gset->weaponnum == WEAPON_TRACERBUG
+                        || gset->weaponnum == WEAPON_TARGETAMPLIFIER
+                        || gset->weaponnum == WEAPON_ECMMINE) {
+                psCreate(NULL, prop, SFX_80AA, -1, -1, 0, 0, PSTYPE_NONE, NULL, -1, NULL, -1, -1, -1, -1);
+                return;
+        }
+
+        handle = bgunAllocateAudioHandle();
+
+        if (handle) {
+                if (prop->type == PROPTYPE_CHR || prop->type == PROPTYPE_PLAYER) {
+                        struct chrdata *chr = prop->chr;
+                        s16 soundnum;
+                        bool overridden = false;
+
+                        if (chrGetShield(chr) > 0) {
+                                sndStart(var80095200, SFX_SHIELD_DAMAGE, handle, -1, -1, -1, -1, -1);
+                                soundnum = SFX_SHIELD_DAMAGE;
+                        } else if (gset->weaponnum == WEAPON_COMBATKNIFE
+                                        || gset->weaponnum == WEAPON_COMBATKNIFE // duplicate
+                                        || gset->weaponnum == WEAPON_BOLT) {
+                                sndStart(var80095200, SFX_05F6, handle, -1, -1, -1, -1, -1);
+                                soundnum = SFX_05F6;
+                                overridden = true;
+                        } else if (gset->weaponnum == WEAPON_UNARMED
+                                        || (gset->weaponfunc == FUNC_SECONDARY
+                                                && (gset->weaponnum == WEAPON_FALCON2
+                                                        || gset->weaponnum == WEAPON_FALCON2_SILENCER
+                                                        || gset->weaponnum == WEAPON_FALCON2_SCOPE
+                                                        || gset->weaponnum == WEAPON_DY357MAGNUM
+                                                        || gset->weaponnum == WEAPON_DY357LX))) {
+                                s16 sounds[] = { SFX_002F, SFX_0030, SFX_0031 };
+                                soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+                                sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+                        } else {
+                                s16 sounds[] = { SFX_HIT_CHR, SFX_HIT_CHR };
+                                soundnum = sounds[rand1 % ARRAYCOUNT(sounds)];
+                                sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+                        }
+
+                        if (*handle) {
+                                psApplyVolPan(*handle, &prop->pos, 400, 2500, 3000, prop->rooms, soundnum, AL_VOL_FULL, 0);
+                        }
+
+                        if (overridden) {
+                                return;
+                        }
+                } else {
+                        s16 soundnum;
+                        bool overridden = false;
+                        u32 stack;
+
+                        if (texturenum == 10000) {
+                                sndStart(var80095200, SFX_SHIELD_DAMAGE, handle, -1, -1, -1, -1, -1);
+                                soundnum = SFX_SHIELD_DAMAGE;
+                        } else if (gset->weaponnum == WEAPON_LASER) {
+                                if (gset->weaponfunc == FUNC_PRIMARY || (gset->unk063a % 8) == 0) {
+                                        if ((rngRandom() % 2) == 0) {
+                                                soundnum = SFX_CLOAK_ON;
+                                        } else {
+                                                soundnum = SFX_CLOAK_OFF;
+                                        }
+
+                                        sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+                                        overridden = true;
+                                }
+                        } else {
+                                if (gset->weaponnum == WEAPON_COMBATKNIFE || gset->weaponnum == WEAPON_BOLT) {
+                                        soundnum = SFX_HIT_METAL_8079;
+                                        sndStart(var80095200, soundnum, handle, -1, -1, -1, -1, -1);
+                                        overridden = true;
+                                } else {
+                                        s16 sounds[] = {
+                                                SFX_001B, SFX_001C, SFX_001D, SFX_001E,
+                                                SFX_001B, SFX_001C, SFX_001D, SFX_001E,
+                                                SFX_001B, SFX_001C, SFX_001D, SFX_001E,
+                                                SFX_0023, SFX_0024, SFX_0025, SFX_0026,
+                                                SFX_0027, SFX_0028, SFX_0029, SFX_002A,
+PS C:\Users\jimmy\Desktop\perfect_dark_VR-port>
+PS C:\Users\jimmy\Desktop\perfect_dark_VR-port> $lines[8050..8140] |
+>> Set-Content .\output\bondgun-8097.txt
+PS C:\Users\jimmy\Desktop\perfect_dark_VR-port>
+PS C:\Users\jimmy\Desktop\perfect_dark_VR-port> Get-Content .\output\bondgun-8097.txt
+                                hand->muzzlez = -((Mtxf *)((uintptr_t)mtxallocation + sp6c * sizeof(Mtxf)))->m[3][2];
+                        } else {
+                                hand->muzzlepos.x = hand->posmtx.m[3][0];
+                                hand->muzzlepos.y = hand->posmtx.m[3][1];
+                                hand->muzzlepos.z = hand->posmtx.m[3][2];
+
+                                mtx4Copy(&hand->posmtx, &hand->muzzlemat);
+
+                                hand->muzzlez = -hand->cammtx.m[3][2];
+                        }
+                }
+        } else {
+                hand->muzzlepos.x = hand->posmtx.m[3][0];
+                hand->muzzlepos.y = hand->posmtx.m[3][1];
+                hand->muzzlepos.z = hand->posmtx.m[3][2];
+
+                mtx4Copy(&hand->posmtx, &hand->muzzlemat);
+
+                hand->muzzlez = -hand->cammtx.m[3][2];
+        }
+
+        switch (weaponnum) {
+        case WEAPON_ROCKETLAUNCHER:
+                bgunUpdateRocketLauncher(hand, handnum, (struct weaponfunc_shootprojectile *)funcdef);
+                break;
+        case WEAPON_DY357MAGNUM:
+        case WEAPON_DY357LX:
+                if (hand->unk0cc8_04 > 0) {
+                        bgunUpdateMagnum(hand, handnum, modeldef, (Mtxf *)mtxallocation);
+                }
+                break;
+        }
+
+        if (hand->firing && g_Vars.lvupdate240 != 0) {
+                bgunCreateFx(hand, handnum, funcdef, weaponnum, modeldef, mtxallocation);
+        }
+
+        if (PLAYERCOUNT() == 1 && IS8MB() && g_Vars.lvupdate240 != 0) {
+                bgunUpdateSmoke(hand, handnum, weaponnum, funcdef);
+        }
+
+        if (hand->ejectstate > EJECTSTATE_INACTIVE) {
+                bgunTickEject(hand, modeldef, isdetonator);
+        }
+
+        if (PLAYERCOUNT() == 1 && IS8MB() && hand->visible
+                        && weaponnum >= WEAPON_FALCON2 && weaponnum <= WEAPON_FALCON2_SCOPE) {
+                bgunUpdateLasersight(hand, modeldef, handnum, mtxallocation);
+        } else {
+                lasersightFree(handnum);
+        }
+
+        hand->animframeinc = 0;
+
+#if VERSION >= VERSION_PAL_BETA
+        hand->animframeincfreal = 0;
+#endif
+}
+
+void bgunTickMaulerCharge(void)
+{
+        struct player *player = g_Vars.currentplayer;
+        s32 i;
+
+        for (i = 0; i < 2; i++) {
+                struct hand *hand = &player->hands[i];
+                u32 charging = false;
+
+                if (hand->inuse) {
+                        if (bgunIsReloading(hand)) {
+                                // Reloading - reset charge amount
+                                hand->matmot1 = 0;
+                        } else if (hand->gset.weaponfunc == FUNC_SECONDARY) {
+                                // Charging or fully charged
+                                s32 oldvalue = hand->matmot1;
+                                s32 newvalue;
+
+                                if (hand->loadedammo[0] >= 2 && hand->matmot1 < 5) {
+                                        charging = true;
+                                        hand->matmot1 += g_Vars.lvupdate60freal * 0.05f;
+                                }
+
+                                if (hand->matmot1 > 5) {
+                                        hand->matmot1 = 5;
+                                }
+
+                                newvalue = hand->matmot1;
+
+                                if (oldvalue != newvalue && hand->loadedammo[0] >= 2) {
+                                        hand->loadedammo[0]--;
+                                }
+PS C:\Users\jimmy\Desktop\perfect_dark_VR-port>
