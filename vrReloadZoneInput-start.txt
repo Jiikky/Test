@@ -1,0 +1,260 @@
+
+.\output\libpd-authoritative.backup.so:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000210414 <vrReloadZoneInput>:
+  210414: ff 03 03 d1  	sub	sp, sp, #192
+  210418: fd 7b 0b a9  	stp	x29, x30, [sp, #176]
+  21041c: fd c3 02 91  	add	x29, sp, #176
+  210420: 48 d0 3b d5  	mrs	x8, TPIDR_EL0
+  210424: 08 15 40 f9  	ldr	x8, [x8, #40]
+  210428: a8 83 1f f8  	stur	x8, [x29, #-8]
+  21042c: a0 83 1d f8  	stur	x0, [x29, #-40]
+  210430: a1 03 1d f8  	stur	x1, [x29, #-48]
+  210434: e8 03 1f aa  	mov	x8, xzr
+  210438: a8 83 1c f8  	stur	x8, [x29, #-56]
+  21043c: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x1208>
+  210440: 08 9d 47 b9  	ldr	w8, [x8, #1948]
+  210444: 48 05 f8 37  	tbnz	w8, #31, 0x2104ec <vrReloadZoneInput+0xd8>
+  210448: 01 00 00 14  	b	0x21044c <vrReloadZoneInput+0x38>
+  21044c: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x1218>
+  210450: 08 9d 47 b9  	ldr	w8, [x8, #1948]
+  210454: 08 09 00 71  	subs	w8, w8, #2
+  210458: ac 04 00 54  	b.gt	0x2104ec <vrReloadZoneInput+0xd8>
+  21045c: 01 00 00 14  	b	0x210460 <vrReloadZoneInput+0x4c>
+  210460: 08 20 00 b0  	adrp	x8, 0x611000 <vrReloadZoneInput+0x1050>
+  210464: 08 b5 44 f9  	ldr	x8, [x8, #2408]
+  210468: 08 01 40 b9  	ldr	w8, [x8]
+  21046c: 08 04 f8 37  	tbnz	w8, #31, 0x2104ec <vrReloadZoneInput+0xd8>
+  210470: 01 00 00 14  	b	0x210474 <vrReloadZoneInput+0x60>
+  210474: 08 20 00 b0  	adrp	x8, 0x611000 <vrReloadZoneInput+0x1064>
+  210478: 08 b5 44 f9  	ldr	x8, [x8, #2408]
+  21047c: 08 01 40 b9  	ldr	w8, [x8]
+  210480: 08 fd 00 71  	subs	w8, w8, #63
+  210484: 4c 03 00 54  	b.gt	0x2104ec <vrReloadZoneInput+0xd8>
+  210488: 01 00 00 14  	b	0x21048c <vrReloadZoneInput+0x78>
+  21048c: 08 20 00 b0  	adrp	x8, 0x611000 <vrReloadZoneInput+0x107c>
+  210490: 08 85 42 f9  	ldr	x8, [x8, #1288]
+  210494: 08 4d 41 f9  	ldr	x8, [x8, #664]
+  210498: 09 e4 82 52  	mov	w9, #5920
+  21049c: 08 69 a9 38  	ldrsb	x8, [x8, x9]
+  2104a0: 09 39 80 52  	mov	w9, #456
+  2104a4: 09 7d 09 9b  	mul	x9, x8, x9
+  2104a8: c8 1f 00 90  	adrp	x8, 0x608000 <vrReloadZoneInput+0x1074>
+  2104ac: 08 21 2c 91  	add	x8, x8, #2824
+  2104b0: 08 01 09 8b  	add	x8, x8, x9
+  2104b4: c9 23 00 90  	adrp	x9, 0x688000 <vrReloadZoneInput+0x1280>
+  2104b8: 29 9d 87 b9  	ldrsw	x9, [x9, #1948]
+  2104bc: 0a 13 80 52  	mov	w10, #152
+  2104c0: 29 7d 0a 9b  	mul	x9, x9, x10
+  2104c4: 08 01 09 8b  	add	x8, x8, x9
+  2104c8: a8 83 1c f8  	stur	x8, [x29, #-56]
+  2104cc: a8 83 5c f8  	ldur	x8, [x29, #-56]
+  2104d0: 08 11 40 b9  	ldr	w8, [x8, #16]
+  2104d4: a8 00 00 35  	cbnz	w8, 0x2104e8 <vrReloadZoneInput+0xd4>
+  2104d8: 01 00 00 14  	b	0x2104dc <vrReloadZoneInput+0xc8>
+  2104dc: e8 03 1f aa  	mov	x8, xzr
+  2104e0: a8 83 1c f8  	stur	x8, [x29, #-56]
+  2104e4: 01 00 00 14  	b	0x2104e8 <vrReloadZoneInput+0xd4>
+  2104e8: 01 00 00 14  	b	0x2104ec <vrReloadZoneInput+0xd8>
+  2104ec: 08 20 00 b0  	adrp	x8, 0x611000 <vrReloadZoneInput+0x10dc>
+  2104f0: 08 b9 44 f9  	ldr	x8, [x8, #2416]
+  2104f4: 08 01 40 b9  	ldr	w8, [x8]
+  2104f8: 48 01 00 35  	cbnz	w8, 0x210520 <vrReloadZoneInput+0x10c>
+  2104fc: 01 00 00 14  	b	0x210500 <vrReloadZoneInput+0xec>
+  210500: a8 20 00 b0  	adrp	x8, 0x625000 <vrReloadZoneInput+0x1140>
+  210504: 08 7d 46 b9  	ldr	w8, [x8, #1660]
+  210508: c8 00 00 35  	cbnz	w8, 0x210520 <vrReloadZoneInput+0x10c>
+  21050c: 01 00 00 14  	b	0x210510 <vrReloadZoneInput+0xfc>
+  210510: c9 23 00 90  	adrp	x9, 0x688000 <vrReloadZoneInput+0x12dc>
+  210514: e8 03 1f 2a  	mov	w8, wzr
+  210518: 28 a1 07 b9  	str	w8, [x9, #1952]
+  21051c: f5 02 00 14  	b	0x2110f0 <vrReloadZoneInput+0xcdc>
+  210520: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x12ec>
+  210524: 08 a5 47 b9  	ldr	w8, [x8, #1956]
+  210528: 08 0d 00 34  	cbz	w8, 0x2106c8 <vrReloadZoneInput+0x2b4>
+  21052c: 01 00 00 14  	b	0x210530 <vrReloadZoneInput+0x11c>
+  210530: 08 20 00 b0  	adrp	x8, 0x611000 <vrReloadZoneInput+0x1120>
+  210534: 08 bd 44 f9  	ldr	x8, [x8, #2424]
+  210538: 08 01 40 b9  	ldr	w8, [x8]
+  21053c: 68 0c 00 35  	cbnz	w8, 0x2106c8 <vrReloadZoneInput+0x2b4>
+  210540: 01 00 00 14  	b	0x210544 <vrReloadZoneInput+0x130>
+  210544: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x1310>
+  210548: 08 a1 47 b9  	ldr	w8, [x8, #1952]
+  21054c: e8 0b 00 34  	cbz	w8, 0x2106c8 <vrReloadZoneInput+0x2b4>
+  210550: 01 00 00 14  	b	0x210554 <vrReloadZoneInput+0x140>
+  210554: 08 20 00 b0  	adrp	x8, 0x611000 <vrReloadZoneInput+0x1144>
+  210558: 08 bd 44 f9  	ldr	x8, [x8, #2424]
+  21055c: 29 00 80 52  	mov	w9, #1
+  210560: 09 01 00 b9  	str	w9, [x8]
+  210564: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x1330>
+  210568: 09 a9 07 b9  	str	w9, [x8, #1960]
+  21056c: ca 23 00 90  	adrp	x10, 0x688000 <vrReloadZoneInput+0x1338>
+  210570: e8 03 1f 2a  	mov	w8, wzr
+  210574: e8 27 00 b9  	str	w8, [sp, #36]
+  210578: 48 ad 07 b9  	str	w8, [x10, #1964]
+  21057c: ca 23 00 90  	adrp	x10, 0x688000 <vrReloadZoneInput+0x1348>
+  210580: 48 b1 07 b9  	str	w8, [x10, #1968]
+  210584: ca 23 00 90  	adrp	x10, 0x688000 <vrReloadZoneInput+0x1350>
+  210588: ea 0b 00 f9  	str	x10, [sp, #16]
+  21058c: 48 b5 07 b9  	str	w8, [x10, #1972]
+  210590: ca 23 00 90  	adrp	x10, 0x688000 <vrReloadZoneInput+0x135c>
+  210594: ea 0f 00 f9  	str	x10, [sp, #24]
+  210598: 48 b9 07 b9  	str	w8, [x10, #1976]
+  21059c: ca 23 00 90  	adrp	x10, 0x688000 <vrReloadZoneInput+0x1368>
+  2105a0: 49 bd 07 b9  	str	w9, [x10, #1980]
+  2105a4: c9 23 00 90  	adrp	x9, 0x688000 <vrReloadZoneInput+0x1370>
+  2105a8: 28 c1 07 b9  	str	w8, [x9, #1984]
+  2105ac: a8 83 5c f8  	ldur	x8, [x29, #-56]
+  2105b0: 00 45 40 b9  	ldr	w0, [x8, #68]
+  2105b4: d9 02 00 94  	bl	0x211118 <vrReloadZoneInput+0xd04>
+  2105b8: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x1384>
+  2105bc: 00 c5 07 bd  	str	s0, [x8, #1988]
+  2105c0: a8 03 5d f8  	ldur	x8, [x29, #-48]
+  2105c4: 00 a9 40 bd  	ldr	s0, [x8, #168]
+  2105c8: a8 83 5d f8  	ldur	x8, [x29, #-40]
+  2105cc: 01 a9 40 bd  	ldr	s1, [x8, #168]
+  2105d0: 00 38 21 1e  	fsub	s0, s0, s1
+  2105d4: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x13a0>
+  2105d8: 00 c9 07 bd  	str	s0, [x8, #1992]
+  2105dc: a0 83 5d f8  	ldur	x0, [x29, #-40]
+  2105e0: e9 02 00 94  	bl	0x211184 <vrReloadZoneInput+0xd70>
+  2105e4: ea 0b 40 f9  	ldr	x10, [sp, #16]
+  2105e8: e9 0f 40 f9  	ldr	x9, [sp, #24]
+  2105ec: e8 27 40 b9  	ldr	w8, [sp, #36]
+  2105f0: 48 b5 07 b9  	str	w8, [x10, #1972]
+  2105f4: 28 b9 07 b9  	str	w8, [x9, #1976]
+  2105f8: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x13c4>
+  2105fc: 08 cd 47 b9  	ldr	w8, [x8, #1996]
+  210600: e8 04 00 34  	cbz	w8, 0x21069c <vrReloadZoneInput+0x288>
+  210604: 01 00 00 14  	b	0x210608 <vrReloadZoneInput+0x1f4>
+  210608: 09 20 00 b0  	adrp	x9, 0x611000 <vrReloadZoneInput+0x11f8>
+  21060c: 29 b9 44 f9  	ldr	x9, [x9, #2416]
+  210610: e8 03 1f 2a  	mov	w8, wzr
+  210614: 28 01 00 b9  	str	w8, [x9]
+  210618: c9 23 00 90  	adrp	x9, 0x688000 <vrReloadZoneInput+0x13e4>
+  21061c: 28 cd 07 b9  	str	w8, [x9, #1996]
+  210620: c9 23 00 90  	adrp	x9, 0x688000 <vrReloadZoneInput+0x13ec>
+  210624: 28 00 80 52  	mov	w8, #1
+  210628: 28 d1 07 b9  	str	w8, [x9, #2000]
+  21062c: a8 20 00 b0  	adrp	x8, 0x625000 <vrReloadZoneInput+0x126c>
+  210630: 00 81 46 bd  	ldr	s0, [x8, #1664]
+  210634: 08 20 20 1e  	fcmp	s0, #0.0
+  210638: 20 02 00 54  	b.eq	0x21067c <vrReloadZoneInput+0x268>
+  21063c: 01 00 00 14  	b	0x210640 <vrReloadZoneInput+0x22c>
+  210640: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x140c>
+  210644: 00 d5 47 bd  	ldr	s0, [x8, #2004]
+  210648: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x1414>
+  21064c: 01 d9 47 bd  	ldr	s1, [x8, #2008]
+  210650: 00 38 21 1e  	fsub	s0, s0, s1
+  210654: a8 20 00 b0  	adrp	x8, 0x625000 <vrReloadZoneInput+0x1294>
+  210658: 01 81 46 bd  	ldr	s1, [x8, #1664]
+  21065c: 00 18 21 1e  	fdiv	s0, s0, s1
+  210660: a0 43 1c bc  	stur	s0, [x29, #-60]
+  210664: a1 43 5c bc  	ldur	s1, [x29, #-60]
+  210668: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x1434>
+  21066c: 00 c5 47 bd  	ldr	s0, [x8, #1988]
+  210670: 00 38 21 1e  	fsub	s0, s0, s1
+  210674: 00 c5 07 bd  	str	s0, [x8, #1988]
+  210678: 01 00 00 14  	b	0x21067c <vrReloadZoneInput+0x268>
+  21067c: 09 20 00 b0  	adrp	x9, 0x611000 <vrReloadZoneInput+0x126c>
+  210680: 29 c1 44 f9  	ldr	x9, [x9, #2432]
+  210684: 28 00 80 52  	mov	w8, #1
+  210688: 28 01 00 b9  	str	w8, [x9]
+  21068c: c9 23 00 90  	adrp	x9, 0x688000 <vrReloadZoneInput+0x1458>
+  210690: e8 03 1f 2a  	mov	w8, wzr
+  210694: 28 dd 07 b9  	str	w8, [x9, #2012]
+  210698: 0b 00 00 14  	b	0x2106c4 <vrReloadZoneInput+0x2b0>
+  21069c: 09 20 00 b0  	adrp	x9, 0x611000 <vrReloadZoneInput+0x128c>
+  2106a0: 29 c1 44 f9  	ldr	x9, [x9, #2432]
+  2106a4: e8 03 1f 2a  	mov	w8, wzr
+  2106a8: 28 01 00 b9  	str	w8, [x9]
+  2106ac: c9 23 00 90  	adrp	x9, 0x688000 <vrReloadZoneInput+0x1478>
+  2106b0: 28 dd 07 b9  	str	w8, [x9, #2012]
+  2106b4: c9 23 00 90  	adrp	x9, 0x688000 <vrReloadZoneInput+0x1480>
+  2106b8: 28 00 80 52  	mov	w8, #1
+  2106bc: 28 b5 07 b9  	str	w8, [x9, #1972]
+  2106c0: 01 00 00 14  	b	0x2106c4 <vrReloadZoneInput+0x2b0>
+  2106c4: 18 00 00 14  	b	0x210724 <vrReloadZoneInput+0x310>
+  2106c8: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x1494>
+  2106cc: 08 a5 47 b9  	ldr	w8, [x8, #1956]
+  2106d0: 88 02 00 35  	cbnz	w8, 0x210720 <vrReloadZoneInput+0x30c>
+  2106d4: 01 00 00 14  	b	0x2106d8 <vrReloadZoneInput+0x2c4>
+  2106d8: 08 20 00 b0  	adrp	x8, 0x611000 <vrReloadZoneInput+0x12c8>
+  2106dc: 08 bd 44 f9  	ldr	x8, [x8, #2424]
+  2106e0: 08 01 40 b9  	ldr	w8, [x8]
+  2106e4: e8 01 00 35  	cbnz	w8, 0x210720 <vrReloadZoneInput+0x30c>
+  2106e8: 01 00 00 14  	b	0x2106ec <vrReloadZoneInput+0x2d8>
+  2106ec: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x14b8>
+  2106f0: 08 a1 47 b9  	ldr	w8, [x8, #1952]
+  2106f4: 68 01 00 34  	cbz	w8, 0x210720 <vrReloadZoneInput+0x30c>
+  2106f8: 01 00 00 14  	b	0x2106fc <vrReloadZoneInput+0x2e8>
+  2106fc: 08 20 00 b0  	adrp	x8, 0x611000 <vrReloadZoneInput+0x12ec>
+  210700: 08 b9 44 f9  	ldr	x8, [x8, #2416]
+  210704: 08 01 40 b9  	ldr	w8, [x8]
+  210708: c8 00 00 35  	cbnz	w8, 0x210720 <vrReloadZoneInput+0x30c>
+  21070c: 01 00 00 14  	b	0x210710 <vrReloadZoneInput+0x2fc>
+  210710: c9 23 00 90  	adrp	x9, 0x688000 <vrReloadZoneInput+0x14dc>
+  210714: 28 00 80 52  	mov	w8, #1
+  210718: 28 ad 07 b9  	str	w8, [x9, #1964]
+  21071c: 01 00 00 14  	b	0x210720 <vrReloadZoneInput+0x30c>
+  210720: 01 00 00 14  	b	0x210724 <vrReloadZoneInput+0x310>
+  210724: 08 20 00 b0  	adrp	x8, 0x611000 <vrReloadZoneInput+0x1314>
+  210728: 08 bd 44 f9  	ldr	x8, [x8, #2424]
+  21072c: 08 01 40 b9  	ldr	w8, [x8]
+  210730: c8 3c 00 34  	cbz	w8, 0x210ec8 <vrReloadZoneInput+0xab4>
+  210734: 01 00 00 14  	b	0x210738 <vrReloadZoneInput+0x324>
+  210738: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x1504>
+  21073c: 08 ad 47 b9  	ldr	w8, [x8, #1964]
+  210740: 48 3c 00 35  	cbnz	w8, 0x210ec8 <vrReloadZoneInput+0xab4>
+  210744: 01 00 00 14  	b	0x210748 <vrReloadZoneInput+0x334>
+  210748: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x1514>
+  21074c: 08 a1 47 b9  	ldr	w8, [x8, #1952]
+  210750: c8 3b 00 34  	cbz	w8, 0x210ec8 <vrReloadZoneInput+0xab4>
+  210754: 01 00 00 14  	b	0x210758 <vrReloadZoneInput+0x344>
+  210758: a8 83 5c f8  	ldur	x8, [x29, #-56]
+  21075c: 00 45 40 b9  	ldr	w0, [x8, #68]
+  210760: 6e 02 00 94  	bl	0x211118 <vrReloadZoneInput+0xd04>
+  210764: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x1530>
+  210768: 01 c5 47 bd  	ldr	s1, [x8, #1988]
+  21076c: 00 38 21 1e  	fsub	s0, s0, s1
+  210770: a0 03 1c bc  	stur	s0, [x29, #-64]
+  210774: 08 20 00 b0  	adrp	x8, 0x611000 <vrReloadZoneInput+0x1364>
+  210778: 08 c5 44 f9  	ldr	x8, [x8, #2440]
+  21077c: 08 01 40 b9  	ldr	w8, [x8]
+  210780: a8 04 00 35  	cbnz	w8, 0x210814 <vrReloadZoneInput+0x400>
+  210784: 01 00 00 14  	b	0x210788 <vrReloadZoneInput+0x374>
+  210788: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x1554>
+  21078c: 08 d1 47 b9  	ldr	w8, [x8, #2000]
+  210790: 08 04 00 35  	cbnz	w8, 0x210810 <vrReloadZoneInput+0x3fc>
+  210794: 01 00 00 14  	b	0x210798 <vrReloadZoneInput+0x384>
+  210798: c8 23 00 90  	adrp	x8, 0x688000 <vrReloadZoneInput+0x1564>
+  21079c: 00 c9 47 bd  	ldr	s0, [x8, #1992]
+  2107a0: a0 c3 1b bc  	stur	s0, [x29, #-68]
+  2107a4: a0 c3 5b bc  	ldur	s0, [x29, #-68]
+  2107a8: 08 20 20 1e  	fcmp	s0, #0.0
+  2107ac: c5 00 00 54  	b.pl	0x2107c4 <vrReloadZoneInput+0x3b0>
+  2107b0: 01 00 00 14  	b	0x2107b4 <vrReloadZoneInput+0x3a0>
+  2107b4: a0 c3 5b bc  	ldur	s0, [x29, #-68]
+  2107b8: 00 40 21 1e  	fneg	s0, s0
+  2107bc: a0 c3 1b bc  	stur	s0, [x29, #-68]
+  2107c0: 01 00 00 14  	b	0x2107c4 <vrReloadZoneInput+0x3b0>
+  2107c4: a8 83 5c f8  	ldur	x8, [x29, #-56]
+  2107c8: 02 7d 40 bd  	ldr	s2, [x8, #124]
+  2107cc: a0 c3 5b bc  	ldur	s0, [x29, #-68]
+  2107d0: 01 90 32 1e  	fmov	s1, #-5.00000000
+  2107d4: 00 08 01 1f  	fmadd	s0, s0, s1, s2
+  2107d8: a0 83 1b bc  	stur	s0, [x29, #-72]
+  2107dc: a8 83 5c f8  	ldur	x8, [x29, #-56]
+  2107e0: 00 81 40 bd  	ldr	s0, [x8, #128]
+  2107e4: a0 43 1b bc  	stur	s0, [x29, #-76]
+  2107e8: a8 83 5c f8  	ldur	x8, [x29, #-56]
+  2107ec: 00 85 40 bd  	ldr	s0, [x8, #132]
+  2107f0: a0 03 1b bc  	stur	s0, [x29, #-80]
+  2107f4: a0 83 5b bc  	ldur	s0, [x29, #-72]
+  2107f8: a1 43 5b bc  	ldur	s1, [x29, #-76]
+  2107fc: a2 03 5b bc  	ldur	s2, [x29, #-80]
+  210800: 00 20 00 b0  	adrp	x0, 0x611000 <vrReloadZoneInput+0x13f0>
+  210804: 00 c8 44 f9  	ldr	x0, [x0, #2448]
+  210808: fa 73 0f 94  	bl	0x5ed7f0 <vrApplyReloadOffset@plt>
